@@ -117,3 +117,32 @@
 	weight = 5000
 	should_be_pinned_by_default = yes
 }
+
+je_the_eastern_slavs = {
+    icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	group = je_group_historical_content
+    
+    is_shown_when_inactive = {
+        exists = c:RUS
+        THIS = c:RUS
+        is_subject = no
+    }
+    possible = {
+        exists = c:RUS
+        THIS = c:RUS
+        is_subject = no
+    }
+	complete = {
+		NOT = {
+		has_law = law_type:law_serfdom 
+	    }
+	}
+    on_complete = {
+		add_primary_culture = cu:ukrainian
+		add_primary_culture = cu:byelorussian
+	}
+
+    weight = 1000
+    should_be_pinned_by_default = yes
+}
